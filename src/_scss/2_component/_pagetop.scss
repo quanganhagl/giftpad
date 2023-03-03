@@ -1,46 +1,46 @@
 .c-pagetop {
-    margin-top: 21px;
+  margin-top: 21px;
 
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
+  @include sp {
+    margin-top: 60px;
+  }
+
+  .c-pagetop__circle {
+    line-height: 0;
+    border-radius: 50%;
+    background-color: $red;
+
+    width: 50px;
+    height: 50px;
+
+    margin-right: calc(22.2% + -201px);
+    margin-left: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include from1400up {
+      margin-right: 109px;
+    }
+    @include tab {
+      margin-right: 50px;
+    }
     @include sp {
-        margin-top: 60px;
+      width: 40px;
+      height: 40px;
+
+      margin-right: 10px;
     }
+  }
 
-    .c-pagetop__circle {
-        line-height: 0;
-        border-radius: 50%;
-        background-color: $red;
-
-        width: 50px;
-        height: 50px;
-
-        margin-right: calc(22.2% + -201px);
-        margin-left: auto;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        @include from1400up {
-            margin-right: 109px;
-        }
-        @include tab {
-            margin-right: 50px;
-        }
-        @include sp {
-            width: 40px;
-            height: 40px;
-
-            margin-right: 10px;
-        }
+  .c-pagetop__logo {
+    width: 26px;
+    height: 14px;
+    @include sp {
+      width: 13px;
+      height: 7px;
     }
-
-    .c-pagetop__logo {
-        width: 26px;
-        height: 14px;
-        @include sp {
-            width: 13px;
-            height: 7px;
-        }
-    }
+  }
 }

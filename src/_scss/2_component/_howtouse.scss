@@ -1,99 +1,88 @@
 .c-howtouse {
-    padding-top: 24px;
+  padding-top: 24px;
+  @include sp {
+    padding-top: 19px;
+  }
+
+  .c-howtouse__heading {
+    margin-top: 44px;
     @include sp {
-        padding-top: 19px;
+      width: 119px;
+
+      margin-top: 39px;
+    }
+  }
+
+  .c-howtouse__blocks {
+    width: 100%;
+    margin-top: 34px;
+
+    @include sp {
+      margin-top: 28px;
+
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .c-howtouse__block {
+    background-color: rgb(248, 248, 248);
+
+    padding: 30px calc(15.4% - 70px) 25px;
+    @include sp {
+      width: 100%;
+      padding: 30px 13px 26px;
     }
 
-    .c-howtouse__wrapper {
+    &:not(:first-child) {
+      justify-content: flex-start;
+      @include sp {
+        margin-top: 30px;
+      }
     }
 
-    .c-howtouse__heading {
-        margin-top: 44px;
+    &:nth-child(2) {
+      .c-howtouse__image {
         @include sp {
-            width: 119px;
-
-            margin-top: 39px;
+          height: unset;
+          width: 233px;
         }
+      }
     }
+  }
 
-    .c-howtouse__blocks {
-        width: 100%;
-        margin-top: 34px;
+  .c-howtouse__image {
+    height: 91px;
 
-        @include sp {
-            margin-top: 28px;
-
-            flex-direction: column;
-            align-items: center;
-        }
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    @include sp {
+      width: 264px;
     }
+  }
 
-    .c-howtouse__block {
-        background-color: rgb(248, 248, 248);
-
-        padding: 30px calc(15.4% - 70px) 25px;
-        // width: 48.1%;
-        @include sp {
-            width: 100%;
-            padding: 30px 13px 26px;
-        }
-
-        &:not(:first-child) {
-            justify-content: flex-start;
-            @include sp {
-                margin-top: 30px;
-            }
-
-            .c-howtouse__image {
-                // margin-top: 10px;
-                @include sp {
-                    //   margin-top: 30px;
-                }
-            }
-        }
-
-        &:nth-child(2) {
-            .c-howtouse__image {
-                @include sp {
-                    height: unset;
-                    width: 233px;
-                }
-            }
-        }
+  .c-howtouse__blockheading {
+    margin-top: 28px;
+    @include sp {
+      margin-top: 29px;
     }
+  }
 
-    .c-howtouse__image {
-        height: 91px;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        @include sp {
-            width: 264px;
-        }
+  .c-howtouse__blockheadingimg {
+    @include sp {
+      height: 18px;
     }
+  }
 
-    .c-howtouse__blockheading {
-        margin-top: 28px;
-        @include sp {
-            margin-top: 29px;
-        }
-    }
+  .c-howtouse__blocksteps {
+    list-style-type: decimal;
+    list-style-position: inside;
 
-    .c-howtouse__blockheadingimg {
-        @include sp {
-            height: 18px;
-        }
-    }
+    margin-top: 18px;
+  }
 
-    .c-howtouse__blocksteps {
-        list-style-type: decimal;
-        list-style-position: inside;
-
-        margin-top: 18px;
-    }
-
-    .c-howtouse__blockstep {
-        letter-spacing: 0.7px;
-    }
+  .c-howtouse__blockstep {
+    letter-spacing: 0.7px;
+  }
 }
