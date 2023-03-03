@@ -1,0 +1,24 @@
+<footer class="c-footer u-paddingx50 is-hidden ">
+    <div class="c-col l-container l-container--1040px">
+        <a href="./" class="c-footer__logowrapper">
+            <picture>
+                <source media="(max-width: 767px )" srcset="./assets/img/footer/logo--sp.png">
+                <img class="c-footer__logo" src="./assets/img/footer/logo.png" alt="Gift Pad">
+            </picture>
+        </a>
+
+        <ul class="c-footer__links c-row">
+            <% footerlinks.forEach(footerlink=> { %>
+                <li class="c-footer__linkwrapper">
+                    <a href="<%= footerlink.url %>" class="c-footer__link">
+                        <%= footerlink.linkname %>
+                    </a>
+                </li>
+                <% }); %>
+        </ul>
+
+        <span class="c-footer__copyright">
+            @Gift Pad
+        </span>
+    </div>
+</footer>

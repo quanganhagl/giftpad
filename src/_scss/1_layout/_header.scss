@@ -1,0 +1,48 @@
+.c-header {
+    width: 100%;
+
+    top: 20px;
+    z-index: 2;
+
+    @include sp {
+        top: 15px;
+        padding: 0 10px;
+    }
+
+    .l-container--1040px {
+        @include sp {
+            max-width: unset;
+        }
+    }
+
+    .c-header__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .c-header__logoblock {
+        @include sp {
+            width: 47px;
+        }
+    }
+
+    .c-header__logo {
+        @include sp {
+            width: 100%;
+        }
+    }
+
+    .c-header__servicetxtblock {
+        height: 13px;
+        @include sp {
+            width: 142px;
+            height: 19px;
+        }
+    }
+
+    .c-header__servicetxt {
+        @include sp {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,54 @@
+<section class="c-course u-paddingx50">
+    <div class="l-container l-container--1040px">
+        <% courses.forEach(course=> { %>
+            <div class="c-course__wrapper c-col">
+                <h2 class="c-course__heading is-hidden">
+                    <picture>
+                        <source media="(max-width:767px)" srcset="./assets/img/course/head<%= course.id %>--sp.png">
+                        <img src="./assets/img/course/head<%= course.id %>.png" alt="<%= course.type %>">
+                    </picture>
+                </h2>
+
+                <div class="c-course__dishes c-row">
+                    <% course.dishes.forEach(dish=> { %>
+                        <div class="c-course__dish c-col--3">
+                            <div class=" u-absolute c-course__dishtitle is-hidden ">
+                                <picture>
+                                    <source media="(max-width:767px)"
+                                        srcset="./assets/img/course/title<%= dish.id %>--sp.png">
+                                    <img src="./assets/img/course/title<%= dish.id %>.png" alt="<%- dish.title %>">
+                                </picture>
+                            </div>
+                            <div class="c-course__dishphoto is-hidden">
+                                <picture>
+                                    <source media="(max-width:767px)"
+                                        srcset="./assets/img/course/img<%= dish.id %>--sp.png">
+                                    <img src="./assets/img/course/img<%= dish.id %>.png" alt="<%- dish.title %>">
+                                </picture>
+
+                            </div>
+                            <p class="c-course__dishdescr is-hidden">
+                                <%- dish.description %>
+                            </p>
+                        </div>
+                        <% }); %>
+                </div>
+                <div class="c-course__btns is-hidden">
+                    <a href="#" class="c-course__btn c-course__btn--view c-button c-button--red ">
+                        <picture>
+                            <source media="(max-width:767px)" srcset="./assets/img/course/btn_allview--sp.png">
+                            <img class="c-button__img" src="./assets/img/course/btn_allview.png" alt="商品ラインナップ見る">
+                        </picture>
+                    </a>
+                    <a href="#course<%= course.id %>" id="coursebtn<%= course.id %>"
+                        class="c-course__btn c-course__btn--buy c-button c-button--white ">
+                        <picture>
+                            <source media="(max-width:767px)" srcset="./assets/img/course/btn_buy--sp.png">
+                            <img class="c-button__img" src="./assets/img/course/btn_buy.png" alt="このコースを購入する">
+                        </picture>
+                    </a>
+                </div>
+            </div>
+            <% }); %>
+    </div>
+</section>

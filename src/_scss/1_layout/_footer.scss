@@ -1,0 +1,107 @@
+.c-footer {
+    padding-top: 98px;
+    padding-bottom: 10px;
+
+    position: relative;
+    overflow: hidden;
+
+    @include sp {
+        margin-top: -98px;
+        padding-bottom: 30px;
+    }
+
+    &::after {
+        content: "";
+        border-radius: 50%;
+        background-color: rgb(241, 245, 245);
+
+        // width: 640px;
+        width: 45.7%;
+        aspect-ratio: 1/1;
+
+        position: absolute;
+        left: 12.9%;
+        // bottom: -405px;
+        top: 62px;
+        z-index: -1;
+        @include tab {
+            //   left: -50%;
+            //   bottom: -275px;
+            //   left: -3.9%;
+            //   width: 640px;
+            width: 85.3%;
+
+            left: -10.9%;
+            top: 78px;
+        }
+        @include sp {
+            left: -3.9%;
+        }
+
+        @include from375down {
+            width: 320px;
+            left: -15px;
+        }
+    }
+
+    .c-footer__wrapper {
+    }
+
+    .c-footer__logowrapper {
+    }
+
+    .c-footer__logo {
+        @include sp {
+            width: 188px;
+        }
+    }
+
+    .c-footer__links {
+        margin-top: 55px;
+        @include tab {
+            flex-direction: column;
+            align-items: center;
+        }
+        @include sp {
+            margin-top: 24px;
+        }
+    }
+
+    .c-footer__linkwrapper {
+        &:not(:first-child) {
+            margin-left: 29px;
+            @include tab {
+                margin-left: 0;
+                margin-top: 20px;
+            }
+            @include sp {
+                margin-top: 21px;
+            }
+        }
+    }
+
+    .c-footer__link {
+        font-size: 12px;
+        letter-spacing: 0.6px;
+        text-decoration-color: $black-almost;
+        text-decoration-line: underline;
+        text-decoration-style: solid;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 2px;
+
+        @include sp {
+            font-weight: 300;
+            text-underline-offset: 3px;
+        }
+    }
+
+    .c-footer__copyright {
+        font-size: 11px;
+        letter-spacing: 0.4px;
+
+        margin-top: 44px;
+        @include sp {
+            font-size: 10px;
+        }
+    }
+}

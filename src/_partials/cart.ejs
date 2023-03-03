@@ -1,0 +1,59 @@
+<section class="c-cart u-paddingx50" id="cart">
+    <div class="c-cart__wrapper c-col l-container l-container--1040px">
+        <div class="c-line is-hidden">
+            <picture>
+                <source media="(max-width: 767px)" srcset="./assets/img/cart/hr_03--sp.png">
+                <img src="./assets/img/cart/hr_03.png" alt="decoration line icon">
+            </picture>
+        </div>
+        <div class="c-cart__courses">
+            <% courses.forEach(course=> { %>
+                <div id="course<%= course.id %>" class="c-cart__course c-row is-hidden">
+                    <div class="c-cart__courseimgblock c-col c-col--2">
+                        <picture>
+                            <source media="(max-width: 767px)" srcset="<%= course.urlimgsp %>">
+                            <img class="c-cart__courseimg" src="<%= course.urlimg %>" alt="<%= course.title %>">
+                        </picture>
+                    </div>
+                    <div class="c-cart__courseinfo c-col c-col--2">
+                        <h2 class="c-cart__coursetitle">
+                            <%= course.title %>
+                        </h2>
+                        <div class="c-cart__pricenote">
+                            <span class="c-cart__courseprice">
+                                <%= course.price %>
+                            </span>
+                            <span class="c-cart__coursepricenote">
+                                （送料・税込）
+                            </span>
+                        </div>
+                        <div class="c-cart__formandbtn c-row">
+                            <form id="quantityForm" class="c-cart__form c-row" action="#">
+                                <label class="c-cart__formlabel" for="quantity<%= course.id %>">数量</label>
+                                <input class="c-cart__forminput" type="number" id="quantity<%= course.id %>"
+                                    name="quantity<%= course.id %>" min="1">
+
+                            </form>
+                            <div class="c-cart__buttons">
+                                <a href="#" class="c-cart__btn c-cart__btn--cart c-button c-button--white">
+                                    <picture>
+                                        <source media="(max-width:767px)" srcset="./assets/img/cart/btn_cart--sp.png">
+                                        <img class="c-button__img" src="./assets/img/cart/btn_cart.png" alt="カートに入れる">
+                                    </picture>
+                                </a>
+                                <a href="#" class="c-cart__btn c-cart__btn--view c-button c-button--red">
+                                    <picture>
+                                        <source media="(max-width:767px)"
+                                            srcset="./assets/img/cart/btn_allview--sp.png">
+                                        <img class="c-button__img" src="./assets/img/cart/btn_allview.png"
+                                            alt="商品ラインナップ見る">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <% }); %>
+        </div>
+    </div>
+</section>

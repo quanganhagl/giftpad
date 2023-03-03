@@ -1,0 +1,80 @@
+.u-palt {
+    font-feature-settings: "palt";
+
+    &--onlypc {
+        font-feature-settings: "palt";
+
+        @include tab {
+            font-feature-settings: unset;
+        }
+    }
+
+    &--onlysp {
+        @include sp {
+            font-feature-settings: "palt";
+        }
+    }
+}
+
+.u-noscroll {
+    overflow: hidden;
+}
+
+.u-absolute {
+    position: absolute;
+}
+
+.u-center {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.u-paddingx50 {
+    padding-right: 50px;
+    padding-left: 50px;
+    @include sp {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+}
+
+.is-display {
+    &--onlypc {
+        @include tab {
+            display: none;
+        }
+    }
+
+    &--pctab {
+        @include sp {
+            display: none;
+        }
+    }
+
+    &--tabsp {
+        display: none;
+        @include tab {
+            display: unset;
+        }
+    }
+
+    &--onlysp {
+        display: none;
+        @include sp {
+            display: unset;
+        }
+    }
+}
+
+.is-hidden {
+    opacity: 0;
+    transition: all 0.5s;
+
+    @media (prefers-reduced-motion) {
+        transition: none;
+    }
+}
+
+.is-shown {
+    opacity: 1;
+}

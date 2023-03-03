@@ -1,0 +1,37 @@
+/* layout
+------------------------------------------------------------*/
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $noto-sans-jp;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: $black-almost;
+    line-height: 1.6;
+
+    position: relative;
+    @include sp {
+        min-width: 320px;
+    }
+}
+
+//-------------------------------------------------------
+.l-container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: $base-width;
+
+    &--1200px {
+        max-width: 1200px;
+    }
+
+    &--1040px {
+        max-width: 1040px;
+
+        @include sp {
+            max-width: 345px;
+        }
+    }
+}
